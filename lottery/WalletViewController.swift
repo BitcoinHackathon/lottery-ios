@@ -16,38 +16,26 @@ class WalletViewController: UIViewController {
     @IBOutlet weak var balanceFiatLabel: UILabel!
     @IBOutlet weak var balanceSatoshiLabel: UILabel!
     
-    private var wallet: Wallet? = Wallet()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        createWalletIfNeeded()
         updateLabels()
     }
     
-    func createWalletIfNeeded() {
-        if wallet == nil {
-            let privateKey: PrivateKey = PrivateKey(network: .testnet)
-            wallet = Wallet(privateKey: privateKey)
-            wallet?.save()
-        }
-    }
-    
     func updateLabels() {
-        addressLabel.text = wallet?.address.cashaddr
-        qrCodeImageView.image = wallet?.address.qrImage()
-        if let balance = wallet?.balance() {
-            balanceSatoshiLabel.text = "\(balance) satoshi"
-            let jpBalance = Double(balance) * (701453.0 * 0.00000001)
-            balanceFiatLabel.text = String(format: "¥:%.2f", jpBalance)
-        }
+        addressLabel.text = LOWallet.wallet.address.cashaddr
+        qrCodeImageView.image = LOWallet.wallet.address.qrImage()
+        let balance = LOWallet.wallet.balance()
+        balanceSatoshiLabel.text = "\(balance) satoshi"
+        let jpBalance = Double(balance) * (701453.0 * 0.00000001)
+        balanceFiatLabel.text = String(format: "¥%.2f", jpBalance)
         
     }
     
     func reloadBalance() {
         // TODO: 3-2. Balanceの更新
-        wallet?.reloadBalance(completion: { [weak self] (utxos) in
+        LOWallet.wallet.reloadBalance(completion: { [weak self] (utxos) in
             DispatchQueue.main.async { self?.updateLabels() }
         })
     }

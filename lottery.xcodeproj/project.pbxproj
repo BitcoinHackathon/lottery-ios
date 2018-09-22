@@ -35,6 +35,7 @@
 		8FED56722156B0F4002305EC /* YenomAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FED56712156B0F4002305EC /* YenomAlertController.swift */; };
 		8FED56742156B126002305EC /* ConfirmSendingAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FED56732156B126002305EC /* ConfirmSendingAlertView.swift */; };
 		8FED56762156B141002305EC /* ConfirmSendingAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FED56752156B141002305EC /* ConfirmSendingAlertView.xib */; };
+		8FED567A2156B85C002305EC /* LOWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FED56792156B85C002305EC /* LOWallet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		8FED56712156B0F4002305EC /* YenomAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YenomAlertController.swift; sourceTree = "<group>"; };
 		8FED56732156B126002305EC /* ConfirmSendingAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmSendingAlertView.swift; sourceTree = "<group>"; };
 		8FED56752156B141002305EC /* ConfirmSendingAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfirmSendingAlertView.xib; sourceTree = "<group>"; };
+		8FED56792156B85C002305EC /* LOWallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOWallet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 				8FE4F2AB21562E4C002AA0DA /* LaunchScreen.storyboard */,
 				8FE4F2AE21562E4C002AA0DA /* Info.plist */,
 				8FED56712156B0F4002305EC /* YenomAlertController.swift */,
+				8FED56792156B85C002305EC /* LOWallet.swift */,
 			);
 			path = lottery;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				8FAA9D4021563A0C007E1487 /* LotteryViewController.swift in Sources */,
 				8FED565D21564C50002305EC /* UIView+Extension.swift in Sources */,
 				8FED565921564971002305EC /* UIView+NibInstantiatable.swift in Sources */,
+				8FED567A2156B85C002305EC /* LOWallet.swift in Sources */,
 				8FED56552156491B002305EC /* UITableView+Extension.swift in Sources */,
 				8FED566D2156A719002305EC /* AddressCell.swift in Sources */,
 				8FED565B21564990002305EC /* NSObject+ClassName.swift in Sources */,

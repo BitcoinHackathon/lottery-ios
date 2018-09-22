@@ -31,11 +31,13 @@ class DetailViewController: UIViewController, StoryboardInstantiatable {
     
     private func showConfirmationAlert(address: String) {
         let confirmSendingAlertView = ConfirmSendingAlertView.instantiate()
-        confirmSendingAlertView.okBlock = { print("ok") }
+        confirmSendingAlertView.okBlock = {
+            LOWallet.send(addressString: address, amount: 1000)
+        }
         confirmSendingAlertView.setup(frame: view.bounds,
                                       addr: address,
-                                      mainAmount: "¥200",
-                                      subAmount: "10 satoshi")
+                                      mainAmount: "¥7.5",
+                                      subAmount: "1000 satoshi")
         let alertController = YenomAlertController(alertView: confirmSendingAlertView)
         present(alertController, animated: false, completion: nil)
     }
@@ -53,9 +55,5 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
         cell.addressLabel.text = address[indexPath.row]
         cell.handler = tapHandler
         return cell
-    }
-    
-    func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
-        
     }
 }
