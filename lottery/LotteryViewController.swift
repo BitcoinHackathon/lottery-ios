@@ -27,8 +27,6 @@ class LotteryViewController: UIViewController {
 
 extension LotteryViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let detailViewController = DetailViewController.instantiate()
-//        self.navigationController?.present(detailViewController, animated: true, completion: nil)
         self.performSegue(withIdentifier: "toDetailViewController", sender: nil)
     }
     

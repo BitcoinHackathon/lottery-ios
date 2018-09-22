@@ -57,10 +57,10 @@
             </objects>
             <point key="canvasLocation" x="1658.4000000000001" y="297.30134932533736"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="2nN-LE-dTf">
             <objects>
-                <viewController id="aMz-Et-FGS" sceneMemberID="viewController">
+                <viewController id="aMz-Et-FGS" customClass="DetailViewController" customModule="lottery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N3Y-7u-ljI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,6 +87,9 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="122" id="ayG-xS-aYd"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -119,6 +122,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QK8-Oe-95m"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="5Zs-C4-KjN" id="g0t-NA-8PW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ov-iF-OuE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

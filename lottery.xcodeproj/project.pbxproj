@@ -30,6 +30,8 @@
 		8FED566521566871002305EC /* SectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FED566421566871002305EC /* SectionHeader.xib */; };
 		8FED5667215676B9002305EC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FED5666215676B9002305EC /* DetailViewController.swift */; };
 		8FED5669215677D6002305EC /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FED5668215677D6002305EC /* UIViewController+Storyboard.swift */; };
+		8FED566D2156A719002305EC /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FED566C2156A719002305EC /* AddressCell.swift */; };
+		8FED566F2156A744002305EC /* AddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FED566E2156A744002305EC /* AddressCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,8 @@
 		8FED566421566871002305EC /* SectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeader.xib; sourceTree = "<group>"; };
 		8FED5666215676B9002305EC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8FED5668215677D6002305EC /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
+		8FED566C2156A719002305EC /* AddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
+		8FED566E2156A744002305EC /* AddressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +198,8 @@
 				8FED566021564ED6002305EC /* LotteryCell.xib */,
 				8FED566221566844002305EC /* SectionHeader.swift */,
 				8FED566421566871002305EC /* SectionHeader.xib */,
+				8FED566C2156A719002305EC /* AddressCell.swift */,
+				8FED566E2156A744002305EC /* AddressCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -320,6 +326,7 @@
 				8FE4F2AA21562E4C002AA0DA /* Assets.xcassets in Resources */,
 				8FED566521566871002305EC /* SectionHeader.xib in Resources */,
 				8FE4F2A821562E4B002AA0DA /* Main.storyboard in Resources */,
+				8FED566F2156A744002305EC /* AddressCell.xib in Resources */,
 				8FED566121564ED6002305EC /* LotteryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,6 +360,7 @@
 				8FED565D21564C50002305EC /* UIView+Extension.swift in Sources */,
 				8FED565921564971002305EC /* UIView+NibInstantiatable.swift in Sources */,
 				8FED56552156491B002305EC /* UITableView+Extension.swift in Sources */,
+				8FED566D2156A719002305EC /* AddressCell.swift in Sources */,
 				8FED565B21564990002305EC /* NSObject+ClassName.swift in Sources */,
 				8FED566321566844002305EC /* SectionHeader.swift in Sources */,
 				8FE4F2A321562E4B002AA0DA /* AppDelegate.swift in Sources */,
@@ -533,7 +541,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J6246ZXP2D;
+				DEVELOPMENT_TEAM = 75STC66VW4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -543,7 +551,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.toshiki.lottery.lottery;
+				PRODUCT_BUNDLE_IDENTIFIER = com.toshiki.lottery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -555,7 +563,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J6246ZXP2D;
+				DEVELOPMENT_TEAM = 75STC66VW4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -565,7 +573,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.toshiki.lottery.lottery;
+				PRODUCT_BUNDLE_IDENTIFIER = com.toshiki.lottery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
