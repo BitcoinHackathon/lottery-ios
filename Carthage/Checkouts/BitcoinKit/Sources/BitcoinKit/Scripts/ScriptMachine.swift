@@ -23,7 +23,6 @@
 //
 
 import Foundation
-import secp256k1
 
 public enum ScriptVerification {
     case StrictEncoding // enforce strict conformance to DER and SEC2 for signatures and pubkeys (aka SCRIPT_VERIFY_STRICTENC)
@@ -99,8 +98,9 @@ public struct ScriptMachine {
                 throw ScriptMachineError.error("Last item on the stack is false.")
             }
         } else {
-            print("This is not p2sh")
-            print(context.shouldVerifyP2SH(), lockScript.isPayToScriptHashScript)
+            if context.verbose {
+                print("context.shouldVerifyP2SH : ", context.shouldVerifyP2SH(), "isP2SH : ", lockScript.isPayToScriptHashScript)
+            }
         }
 
         // If nothing failed, validation passed.

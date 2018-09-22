@@ -31,7 +31,6 @@ class OpCodeTests: XCTestCase {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
         context = ScriptExecutionContext()
-        context.verbose = true
     }
     
     func testOp1Negate() {
@@ -583,7 +582,7 @@ class OpCodeTests: XCTestCase {
         let index: UInt32 = 1
         let outpoint = TransactionOutPoint(hash: hash, index: index)
 
-        let balance: Int64 = 169012961
+        let balance: UInt64 = 169012961
 
         let privateKey = try! PrivateKey(wif: "92pMamV6jNyEq9pDpY4f6nBy9KpV2cfJT4L5zDUYiGqyQHJfF1K")
 
@@ -603,7 +602,7 @@ class OpCodeTests: XCTestCase {
         }
 
         let sigData: Data = signature + UInt8(hashType)
-        let pubkeyData: Data = fromPublicKey.raw
+        let pubkeyData: Data = fromPublicKey.data
 
         // OP_CHECKSIG success
         do {
@@ -669,7 +668,7 @@ class OpCodeTests: XCTestCase {
         let index: UInt32 = 1
         let outpoint = TransactionOutPoint(hash: hash, index: index)
 
-        let balance: Int64 = 2047900000
+        let balance: UInt64 = 2047900000
 
         let privateKey = try! PrivateKey(wif: "92pMamV6jNyEq9pDpY4f6nBy9KpV2cfJT4L5zDUYiGqyQHJfF1K")
 
@@ -689,7 +688,7 @@ class OpCodeTests: XCTestCase {
         }
 
         let sigData: Data = signature + UInt8(hashType)
-        let pubkeyData: Data = fromPublicKey.raw
+        let pubkeyData: Data = fromPublicKey.data
 
         // OP_CHECKSIG success
         do {

@@ -36,15 +36,15 @@ class ScriptMachineTests: XCTestCase {
         let index: UInt32 = 1
         let outpoint = TransactionOutPoint(hash: hash, index: index)
         
-        let balance: Int64 = 169012961
-        let amount: Int64  =  50000000
-        let fee: Int64     =  10000000
+        let balance: UInt64 = 169012961
+        let amount: UInt64  =  50000000
+        let fee: UInt64     =  10000000
         let toAddress = "mv4rnyY3Su5gjcDNzbMLKBQkBicCtHUtFB" // https://testnet.coinfaucet.eu/en/
         
         let privateKey = try! PrivateKey(wif: "92pMamV6jNyEq9pDpY4f6nBy9KpV2cfJT4L5zDUYiGqyQHJfF1K")
         
         let fromPublicKey = privateKey.publicKey()
-        let fromPubKeyHash = Crypto.sha256ripemd160(fromPublicKey.raw)
+        let fromPubKeyHash = Crypto.sha256ripemd160(fromPublicKey.data)
         let toPubKeyHash = Base58.decode(toAddress)!.dropFirst().dropLast(4)
         
         // unsigned tx
@@ -70,7 +70,7 @@ class ScriptMachineTests: XCTestCase {
         XCTAssertEqual(fromPublicKey.pubkeyHash.hex, "2a539adfd7aefcc02e0196b4ccf76aea88a1f470")
         let unlockScript: Script = try! Script()
             .appendData(signature + UInt8(hashType))
-            .appendData(fromPublicKey.raw)
+            .appendData(fromPublicKey.data)
         
         // signed tx
         let txin = TransactionInput(previousOutput: outpoint, signatureScript: unlockScript.data, sequence: UInt32.max)
@@ -79,7 +79,7 @@ class ScriptMachineTests: XCTestCase {
         // crypto verify
         do {
             let sigData: Data = signature + UInt8(hashType)
-            let pubkeyData: Data = fromPublicKey.raw
+            let pubkeyData: Data = fromPublicKey.data
             let result = try Crypto.verifySigData(for: signedTx, inputIndex: 0, utxo: utxoToSign, sigData: sigData, pubKeyData: pubkeyData)
             XCTAssertTrue(result)
         } catch (let err) {

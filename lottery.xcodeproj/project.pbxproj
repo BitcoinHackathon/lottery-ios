@@ -7,15 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8FAA9D3B215632CA007E1487 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAA9D39215632CA007E1487 /* KeychainAccess.framework */; };
-		8FAA9D3C215632CA007E1487 /* BitcoinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAA9D3A215632CA007E1487 /* BitcoinKit.framework */; };
+		8FAA9D3E21563879007E1487 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAA9D3D21563879007E1487 /* WalletViewController.swift */; };
+		8FAA9D4021563A0C007E1487 /* LotteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAA9D3F21563A0C007E1487 /* LotteryViewController.swift */; };
+		8FAA9D4221563B53007E1487 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAA9D4121563B53007E1487 /* MyPageViewController.swift */; };
 		8FE4F2A321562E4B002AA0DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE4F2A221562E4B002AA0DA /* AppDelegate.swift */; };
-		8FE4F2A521562E4B002AA0DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE4F2A421562E4B002AA0DA /* ViewController.swift */; };
 		8FE4F2A821562E4B002AA0DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FE4F2A621562E4B002AA0DA /* Main.storyboard */; };
 		8FE4F2AA21562E4C002AA0DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FE4F2A921562E4C002AA0DA /* Assets.xcassets */; };
 		8FE4F2AD21562E4C002AA0DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FE4F2AB21562E4C002AA0DA /* LaunchScreen.storyboard */; };
 		8FE4F2B821562E4C002AA0DA /* lotteryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE4F2B721562E4C002AA0DA /* lotteryTests.swift */; };
 		8FE4F2C321562E4C002AA0DA /* lotteryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE4F2C221562E4C002AA0DA /* lotteryUITests.swift */; };
+		8FED564C215646FD002305EC /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAA9D39215632CA007E1487 /* KeychainAccess.framework */; };
+		8FED564E2156475D002305EC /* BitcoinKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAA9D3A215632CA007E1487 /* BitcoinKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8FED56502156475D002305EC /* KeychainAccess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAA9D39215632CA007E1487 /* KeychainAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8FED56552156491B002305EC /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FED56542156491B002305EC /* UITableView+Extension.swift */; };
+		8FED565721564948002305EC /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FED565621564948002305EC /* UICollectionView+Extension.swift */; };
+		8FED565921564971002305EC /* UIView+NibInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FED565821564971002305EC /* UIView+NibInstantiatable.swift */; };
+		8FED565B21564990002305EC /* NSObject+ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FED565A21564990002305EC /* NSObject+ClassName.swift */; };
+		8FED565D21564C50002305EC /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FED565C21564C50002305EC /* UIView+Extension.swift */; };
+		8FED565F21564E61002305EC /* LotteryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FED565E21564E61002305EC /* LotteryCell.swift */; };
+		8FED566121564ED6002305EC /* LotteryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FED566021564ED6002305EC /* LotteryCell.xib */; };
+		8FED566321566844002305EC /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FED566221566844002305EC /* SectionHeader.swift */; };
+		8FED566521566871002305EC /* SectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FED566421566871002305EC /* SectionHeader.xib */; };
+		8FED5667215676B9002305EC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FED5666215676B9002305EC /* DetailViewController.swift */; };
+		8FED5669215677D6002305EC /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FED5668215677D6002305EC /* UIViewController+Storyboard.swift */; };
+		8FED566B21567806002305EC /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FED566A21567806002305EC /* DetailViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +50,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8FED56512156475D002305EC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8FED56502156475D002305EC /* KeychainAccess.framework in Embed Frameworks */,
+				8FED564E2156475D002305EC /* BitcoinKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8FAA9D39215632CA007E1487 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
 		8FAA9D3A215632CA007E1487 /* BitcoinKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BitcoinKit.framework; path = Carthage/Build/iOS/BitcoinKit.framework; sourceTree = "<group>"; };
+		8FAA9D3D21563879007E1487 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
+		8FAA9D3F21563A0C007E1487 /* LotteryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryViewController.swift; sourceTree = "<group>"; };
+		8FAA9D4121563B53007E1487 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		8FE4F29F21562E4B002AA0DA /* lottery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lottery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FE4F2A221562E4B002AA0DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8FE4F2A421562E4B002AA0DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8FE4F2A721562E4B002AA0DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8FE4F2A921562E4C002AA0DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FE4F2AC21562E4C002AA0DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +83,18 @@
 		8FE4F2BE21562E4C002AA0DA /* lotteryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lotteryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FE4F2C221562E4C002AA0DA /* lotteryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lotteryUITests.swift; sourceTree = "<group>"; };
 		8FE4F2C421562E4C002AA0DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FED56542156491B002305EC /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		8FED565621564948002305EC /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		8FED565821564971002305EC /* UIView+NibInstantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+NibInstantiatable.swift"; sourceTree = "<group>"; };
+		8FED565A21564990002305EC /* NSObject+ClassName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+ClassName.swift"; sourceTree = "<group>"; };
+		8FED565C21564C50002305EC /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		8FED565E21564E61002305EC /* LotteryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryCell.swift; sourceTree = "<group>"; };
+		8FED566021564ED6002305EC /* LotteryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LotteryCell.xib; sourceTree = "<group>"; };
+		8FED566221566844002305EC /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		8FED566421566871002305EC /* SectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeader.xib; sourceTree = "<group>"; };
+		8FED5666215676B9002305EC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		8FED5668215677D6002305EC /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
+		8FED566A21567806002305EC /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FAA9D3B215632CA007E1487 /* KeychainAccess.framework in Frameworks */,
-				8FAA9D3C215632CA007E1487 /* BitcoinKit.framework in Frameworks */,
+				8FED564C215646FD002305EC /* KeychainAccess.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,8 +156,14 @@
 		8FE4F2A121562E4B002AA0DA /* lottery */ = {
 			isa = PBXGroup;
 			children = (
+				8FED5653215648FC002305EC /* Extensions */,
+				8FED5652215648C9002305EC /* Cells */,
 				8FE4F2A221562E4B002AA0DA /* AppDelegate.swift */,
-				8FE4F2A421562E4B002AA0DA /* ViewController.swift */,
+				8FAA9D3D21563879007E1487 /* WalletViewController.swift */,
+				8FAA9D3F21563A0C007E1487 /* LotteryViewController.swift */,
+				8FAA9D4121563B53007E1487 /* MyPageViewController.swift */,
+				8FED5666215676B9002305EC /* DetailViewController.swift */,
+				8FED566A21567806002305EC /* DetailViewController.storyboard */,
 				8FE4F2A621562E4B002AA0DA /* Main.storyboard */,
 				8FE4F2A921562E4C002AA0DA /* Assets.xcassets */,
 				8FE4F2AB21562E4C002AA0DA /* LaunchScreen.storyboard */,
@@ -141,6 +190,30 @@
 			path = lotteryUITests;
 			sourceTree = "<group>";
 		};
+		8FED5652215648C9002305EC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8FED565E21564E61002305EC /* LotteryCell.swift */,
+				8FED566021564ED6002305EC /* LotteryCell.xib */,
+				8FED566221566844002305EC /* SectionHeader.swift */,
+				8FED566421566871002305EC /* SectionHeader.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8FED5653215648FC002305EC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8FED56542156491B002305EC /* UITableView+Extension.swift */,
+				8FED565621564948002305EC /* UICollectionView+Extension.swift */,
+				8FED565821564971002305EC /* UIView+NibInstantiatable.swift */,
+				8FED565A21564990002305EC /* NSObject+ClassName.swift */,
+				8FED565C21564C50002305EC /* UIView+Extension.swift */,
+				8FED5668215677D6002305EC /* UIViewController+Storyboard.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,6 +224,7 @@
 				8FE4F29B21562E4B002AA0DA /* Sources */,
 				8FE4F29C21562E4B002AA0DA /* Frameworks */,
 				8FE4F29D21562E4B002AA0DA /* Resources */,
+				8FED56512156475D002305EC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -247,7 +321,10 @@
 			files = (
 				8FE4F2AD21562E4C002AA0DA /* LaunchScreen.storyboard in Resources */,
 				8FE4F2AA21562E4C002AA0DA /* Assets.xcassets in Resources */,
+				8FED566521566871002305EC /* SectionHeader.xib in Resources */,
 				8FE4F2A821562E4B002AA0DA /* Main.storyboard in Resources */,
+				8FED566B21567806002305EC /* DetailViewController.storyboard in Resources */,
+				8FED566121564ED6002305EC /* LotteryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,8 +349,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FE4F2A521562E4B002AA0DA /* ViewController.swift in Sources */,
+				8FED565721564948002305EC /* UICollectionView+Extension.swift in Sources */,
+				8FED565F21564E61002305EC /* LotteryCell.swift in Sources */,
+				8FAA9D4221563B53007E1487 /* MyPageViewController.swift in Sources */,
+				8FED5667215676B9002305EC /* DetailViewController.swift in Sources */,
+				8FAA9D4021563A0C007E1487 /* LotteryViewController.swift in Sources */,
+				8FED565D21564C50002305EC /* UIView+Extension.swift in Sources */,
+				8FED565921564971002305EC /* UIView+NibInstantiatable.swift in Sources */,
+				8FED56552156491B002305EC /* UITableView+Extension.swift in Sources */,
+				8FED565B21564990002305EC /* NSObject+ClassName.swift in Sources */,
+				8FED566321566844002305EC /* SectionHeader.swift in Sources */,
 				8FE4F2A321562E4B002AA0DA /* AppDelegate.swift in Sources */,
+				8FED5669215677D6002305EC /* UIViewController+Storyboard.swift in Sources */,
+				8FAA9D3E21563879007E1487 /* WalletViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
