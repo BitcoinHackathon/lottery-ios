@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Vfl-5D-f5V" customClass="LotteryCell" customModule="lottery" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="366" height="178"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ドリームジャンボ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3G3-iD-saw">
+                    <rect key="frame" x="15" y="16" width="246" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="bqQ-3j-nbd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loterry1" translatesAutoresizingMaskIntoConstraints="NO" id="1QB-DW-NaT">
+                    <rect key="frame" x="16" y="45" width="334" height="122"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="3G3-iD-saw" firstAttribute="top" secondItem="u6y-u7-3RV" secondAttribute="top" constant="16" id="44I-1x-Fmp"/>
+                <constraint firstItem="3G3-iD-saw" firstAttribute="leading" secondItem="u6y-u7-3RV" secondAttribute="leading" constant="15" id="KDl-v4-aM0"/>
+                <constraint firstItem="u6y-u7-3RV" firstAttribute="trailing" secondItem="3G3-iD-saw" secondAttribute="trailing" constant="105" id="KO8-7T-pgo"/>
+                <constraint firstItem="1QB-DW-NaT" firstAttribute="top" secondItem="3G3-iD-saw" secondAttribute="bottom" constant="8" id="KPm-un-vWj"/>
+                <constraint firstItem="1QB-DW-NaT" firstAttribute="leading" secondItem="u6y-u7-3RV" secondAttribute="leading" constant="16" id="LlW-0R-YEX"/>
+                <constraint firstItem="u6y-u7-3RV" firstAttribute="trailing" secondItem="1QB-DW-NaT" secondAttribute="trailing" constant="16" id="NTP-ar-cCA"/>
+                <constraint firstItem="u6y-u7-3RV" firstAttribute="bottom" secondItem="1QB-DW-NaT" secondAttribute="bottom" constant="11" id="dJK-2r-zBm"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="u6y-u7-3RV"/>
+            <point key="canvasLocation" x="28.800000000000001" y="-146.62668665667167"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="loterry1" width="1634" height="394"/>
+    </resources>
+</document>

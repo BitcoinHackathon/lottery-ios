@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="jFR-79-FFP" customClass="SectionHeader" customModule="lottery" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="366" height="57"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="開催中" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YwV-E3-GZT">
+                    <rect key="frame" x="15" y="16" width="246" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="cBl-M2-cwH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="YwV-E3-GZT" firstAttribute="top" secondItem="cpR-fK-31L" secondAttribute="top" constant="16" id="HvG-D6-zPt"/>
+                <constraint firstItem="YwV-E3-GZT" firstAttribute="leading" secondItem="cpR-fK-31L" secondAttribute="leading" constant="15" id="fDk-Rg-7SA"/>
+                <constraint firstItem="cpR-fK-31L" firstAttribute="trailing" secondItem="YwV-E3-GZT" secondAttribute="trailing" constant="105" id="zud-56-XnL"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="cpR-fK-31L"/>
+            <connections>
+                <outlet property="sectionLabel" destination="YwV-E3-GZT" id="jE9-Ea-NWq"/>
+            </connections>
+            <point key="canvasLocation" x="28.800000000000001" y="-201.04947526236884"/>
+        </view>
+    </objects>
+</document>
