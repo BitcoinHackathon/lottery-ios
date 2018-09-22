@@ -11,6 +11,7 @@ import UIKit
 class AddressCell: UITableViewCell, NibInstantiatable {
     static var nibOptions: [UINib.OptionsKey : Any]?
     @IBOutlet weak var addressLabel: UILabel!
+    var handler:((_ address:String)->())!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,6 +20,7 @@ class AddressCell: UITableViewCell, NibInstantiatable {
     }
     
     @IBAction func pushPurchaseButton() {
-        
+        guard let address = addressLabel.text else { return }
+        handler(address)
     }
 }

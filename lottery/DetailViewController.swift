@@ -14,13 +14,30 @@ class DetailViewController: UIViewController, StoryboardInstantiatable {
     
     @IBOutlet weak var tableView: UITableView!
     var address:[String] = ["afsajgkdhwa932u52ohfiwlsd", "wagij283798fjfdlsf"]
+    var tapHandler: ((_ address: String)->())!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(AddressCell.self)
+        
+        tapHandler = {(address: String) in
+            print("\(address)tapped!!")
+            self.showConfirmationAlert(address: address)
+        }
+    }
+    
+    private func showConfirmationAlert(address: String) {
+        let confirmSendingAlertView = ConfirmSendingAlertView.instantiate()
+        confirmSendingAlertView.okBlock = { print("ok") }
+        confirmSendingAlertView.setup(frame: view.bounds,
+                                      addr: address,
+                                      mainAmount: "¥200",
+                                      subAmount: "10 satoshi")
+        let alertController = YenomAlertController(alertView: confirmSendingAlertView)
+        present(alertController, animated: false, completion: nil)
     }
 }
 
@@ -33,6 +50,8 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: AddressCell.defaultReuseIdentifier, for: indexPath) as! AddressCell
+        cell.addressLabel.text = address[indexPath.row]
+        cell.handler = tapHandler
         return cell
     }
     

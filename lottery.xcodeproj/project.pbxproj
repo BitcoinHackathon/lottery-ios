@@ -32,6 +32,9 @@
 		8FED5669215677D6002305EC /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FED5668215677D6002305EC /* UIViewController+Storyboard.swift */; };
 		8FED566D2156A719002305EC /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FED566C2156A719002305EC /* AddressCell.swift */; };
 		8FED566F2156A744002305EC /* AddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FED566E2156A744002305EC /* AddressCell.xib */; };
+		8FED56722156B0F4002305EC /* YenomAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FED56712156B0F4002305EC /* YenomAlertController.swift */; };
+		8FED56742156B126002305EC /* ConfirmSendingAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FED56732156B126002305EC /* ConfirmSendingAlertView.swift */; };
+		8FED56762156B141002305EC /* ConfirmSendingAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FED56752156B141002305EC /* ConfirmSendingAlertView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +100,9 @@
 		8FED5668215677D6002305EC /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
 		8FED566C2156A719002305EC /* AddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
 		8FED566E2156A744002305EC /* AddressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressCell.xib; sourceTree = "<group>"; };
+		8FED56712156B0F4002305EC /* YenomAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YenomAlertController.swift; sourceTree = "<group>"; };
+		8FED56732156B126002305EC /* ConfirmSendingAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmSendingAlertView.swift; sourceTree = "<group>"; };
+		8FED56752156B141002305EC /* ConfirmSendingAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfirmSendingAlertView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +164,7 @@
 		8FE4F2A121562E4B002AA0DA /* lottery */ = {
 			isa = PBXGroup;
 			children = (
+				8FED56702156B0B3002305EC /* View */,
 				8FED5653215648FC002305EC /* Extensions */,
 				8FED5652215648C9002305EC /* Cells */,
 				8FE4F2A221562E4B002AA0DA /* AppDelegate.swift */,
@@ -169,6 +176,7 @@
 				8FE4F2A921562E4C002AA0DA /* Assets.xcassets */,
 				8FE4F2AB21562E4C002AA0DA /* LaunchScreen.storyboard */,
 				8FE4F2AE21562E4C002AA0DA /* Info.plist */,
+				8FED56712156B0F4002305EC /* YenomAlertController.swift */,
 			);
 			path = lottery;
 			sourceTree = "<group>";
@@ -215,6 +223,15 @@
 				8FED5668215677D6002305EC /* UIViewController+Storyboard.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8FED56702156B0B3002305EC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8FED56732156B126002305EC /* ConfirmSendingAlertView.swift */,
+				8FED56752156B141002305EC /* ConfirmSendingAlertView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +339,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FED56762156B141002305EC /* ConfirmSendingAlertView.xib in Resources */,
 				8FE4F2AD21562E4C002AA0DA /* LaunchScreen.storyboard in Resources */,
 				8FE4F2AA21562E4C002AA0DA /* Assets.xcassets in Resources */,
 				8FED566521566871002305EC /* SectionHeader.xib in Resources */,
@@ -353,9 +371,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FED565721564948002305EC /* UICollectionView+Extension.swift in Sources */,
+				8FED56742156B126002305EC /* ConfirmSendingAlertView.swift in Sources */,
 				8FED565F21564E61002305EC /* LotteryCell.swift in Sources */,
 				8FAA9D4221563B53007E1487 /* MyPageViewController.swift in Sources */,
 				8FED5667215676B9002305EC /* DetailViewController.swift in Sources */,
+				8FED56722156B0F4002305EC /* YenomAlertController.swift in Sources */,
 				8FAA9D4021563A0C007E1487 /* LotteryViewController.swift in Sources */,
 				8FED565D21564C50002305EC /* UIView+Extension.swift in Sources */,
 				8FED565921564971002305EC /* UIView+NibInstantiatable.swift in Sources */,
