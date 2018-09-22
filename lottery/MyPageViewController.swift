@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MyPageViewController.swift
 //  lottery
 //
 //  Created by 冨平準喜 on 2018/09/22.
@@ -8,13 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class MyPageViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-
+    
+    
 }
-

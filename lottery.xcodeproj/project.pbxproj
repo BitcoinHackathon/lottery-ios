@@ -30,7 +30,6 @@
 		8FED566521566871002305EC /* SectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FED566421566871002305EC /* SectionHeader.xib */; };
 		8FED5667215676B9002305EC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FED5666215676B9002305EC /* DetailViewController.swift */; };
 		8FED5669215677D6002305EC /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FED5668215677D6002305EC /* UIViewController+Storyboard.swift */; };
-		8FED566B21567806002305EC /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FED566A21567806002305EC /* DetailViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,7 +93,6 @@
 		8FED566421566871002305EC /* SectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeader.xib; sourceTree = "<group>"; };
 		8FED5666215676B9002305EC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8FED5668215677D6002305EC /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
-		8FED566A21567806002305EC /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,7 +161,6 @@
 				8FAA9D3F21563A0C007E1487 /* LotteryViewController.swift */,
 				8FAA9D4121563B53007E1487 /* MyPageViewController.swift */,
 				8FED5666215676B9002305EC /* DetailViewController.swift */,
-				8FED566A21567806002305EC /* DetailViewController.storyboard */,
 				8FE4F2A621562E4B002AA0DA /* Main.storyboard */,
 				8FE4F2A921562E4C002AA0DA /* Assets.xcassets */,
 				8FE4F2AB21562E4C002AA0DA /* LaunchScreen.storyboard */,
@@ -323,7 +320,6 @@
 				8FE4F2AA21562E4C002AA0DA /* Assets.xcassets in Resources */,
 				8FED566521566871002305EC /* SectionHeader.xib in Resources */,
 				8FE4F2A821562E4B002AA0DA /* Main.storyboard in Resources */,
-				8FED566B21567806002305EC /* DetailViewController.storyboard in Resources */,
 				8FED566121564ED6002305EC /* LotteryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
