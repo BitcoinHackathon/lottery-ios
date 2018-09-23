@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -123,7 +124,10 @@
                         <viewLayoutGuide key="safeArea" id="QK8-Oe-95m"/>
                     </view>
                     <connections>
+                        <outlet property="descriptionTextView" destination="sWq-jl-4MJ" id="tuW-Sz-9Re"/>
+                        <outlet property="imageView" destination="Gqs-DV-62b" id="pAF-9f-8Tb"/>
                         <outlet property="tableView" destination="5Zs-C4-KjN" id="g0t-NA-8PW"/>
+                        <outlet property="titleLabel" destination="jHi-Y8-6C6" id="mBi-cE-pQa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ov-iF-OuE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -178,6 +182,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nY4-by-Osd">
                                 <rect key="frame" x="276" y="128" width="24" height="24"/>
                                 <state key="normal" image="ic_update"/>
+                                <connections>
+                                    <action selector="tapUpdateButtonWithSender:" destination="33J-Vh-lEt" eventType="touchUpInside" id="dUr-TX-cHZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

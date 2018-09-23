@@ -10,10 +10,16 @@ import UIKit
 
 class LotteryCell: UICollectionViewCell, NibInstantiatable {
     static var nibOptions: [UINib.OptionsKey : Any]?
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         layer.cornerRadius = 6
         layer.masksToBounds = true
+    }
+    
+    func setCell(lottery: Lottery) {
+        titleLabel.text = lottery.title
     }
 }

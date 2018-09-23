@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import APIKit
 
 class LotteryViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var lotteries:[String] = ["ドリームジャッンボ", "ロト6"]
+    var lotteries = [Lottery]()
     var sections:[String] = ["開催中", "抽選終了"]
     
     override func viewDidLoad() {
@@ -22,12 +23,30 @@ class LotteryViewController: UIViewController {
         collectionView.register(LotteryCell.self)
         let nib:UINib = UINib(nibName: SectionHeader.className, bundle: nil)
         collectionView.register(nib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.defaultReuseIdentifier)
+        
+        let request = LotteryRequest()
+        Session.send(request) { result in
+            switch result {
+            case .success(let lotteries):
+                self.lotteries = lotteries
+                self.collectionView.reloadData()
+            case .failure(let error):
+                print("error: \(error)")
+            }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailViewController" {
+            let detailViewController = segue.destination as! DetailViewController
+            detailViewController.lottery = sender as? Lottery
+        }
     }
 }
 
 extension LotteryViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "toDetailViewController", sender: nil)
+        self.performSegue(withIdentifier: "toDetailViewController", sender: lotteries[indexPath.row])
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -61,6 +80,7 @@ extension LotteryViewController: UICollectionViewDelegate, UICollectionViewDeleg
     
     internal func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LotteryCell.defaultReuseIdentifier, for: indexPath) as! LotteryCell
+        cell.setCell(lottery: lotteries[indexPath.row])
         return cell
     }
 }

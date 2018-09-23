@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F7248322156C2C400AD7B9B /* BitcoinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAA9D3A215632CA007E1487 /* BitcoinKit.framework */; };
 		8FAA9D3E21563879007E1487 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAA9D3D21563879007E1487 /* WalletViewController.swift */; };
 		8FAA9D4021563A0C007E1487 /* LotteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAA9D3F21563A0C007E1487 /* LotteryViewController.swift */; };
 		8FAA9D4221563B53007E1487 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAA9D4121563B53007E1487 /* MyPageViewController.swift */; };
+		8FB39614215715C10010F835 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB39612215715C10010F835 /* APIKit.framework */; };
+		8FB39615215715C10010F835 /* APIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB39612215715C10010F835 /* APIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8FB39616215715C10010F835 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB39613215715C10010F835 /* Result.framework */; };
+		8FB39617215715C10010F835 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB39613215715C10010F835 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8FB39619215717F10010F835 /* AddressRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB39618215717F10010F835 /* AddressRequest.swift */; };
 		8FE4F2A321562E4B002AA0DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE4F2A221562E4B002AA0DA /* AppDelegate.swift */; };
 		8FE4F2A821562E4B002AA0DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FE4F2A621562E4B002AA0DA /* Main.storyboard */; };
 		8FE4F2AA21562E4C002AA0DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FE4F2A921562E4C002AA0DA /* Assets.xcassets */; };
@@ -36,6 +42,7 @@
 		8FED56742156B126002305EC /* ConfirmSendingAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FED56732156B126002305EC /* ConfirmSendingAlertView.swift */; };
 		8FED56762156B141002305EC /* ConfirmSendingAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FED56752156B141002305EC /* ConfirmSendingAlertView.xib */; };
 		8FED567A2156B85C002305EC /* LOWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FED56792156B85C002305EC /* LOWallet.swift */; };
+		8FED567D2156BD41002305EC /* LotteryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FED567C2156BD41002305EC /* LotteryRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,8 +69,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				8FB39615215715C10010F835 /* APIKit.framework in Embed Frameworks */,
 				8FED56502156475D002305EC /* KeychainAccess.framework in Embed Frameworks */,
 				8FED564E2156475D002305EC /* BitcoinKit.framework in Embed Frameworks */,
+				8FB39617215715C10010F835 /* Result.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,11 +80,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8F72406E2157139A0070F689 /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
+		8F72482D2156BDFD00AD7B9B /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
 		8FAA9D39215632CA007E1487 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
 		8FAA9D3A215632CA007E1487 /* BitcoinKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BitcoinKit.framework; path = Carthage/Build/iOS/BitcoinKit.framework; sourceTree = "<group>"; };
 		8FAA9D3D21563879007E1487 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
 		8FAA9D3F21563A0C007E1487 /* LotteryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryViewController.swift; sourceTree = "<group>"; };
 		8FAA9D4121563B53007E1487 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		8FB39612215715C10010F835 /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
+		8FB39613215715C10010F835 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		8FB39618215717F10010F835 /* AddressRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressRequest.swift; sourceTree = "<group>"; };
 		8FE4F29F21562E4B002AA0DA /* lottery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lottery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FE4F2A221562E4B002AA0DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FE4F2A721562E4B002AA0DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -105,6 +119,7 @@
 		8FED56732156B126002305EC /* ConfirmSendingAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmSendingAlertView.swift; sourceTree = "<group>"; };
 		8FED56752156B141002305EC /* ConfirmSendingAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfirmSendingAlertView.xib; sourceTree = "<group>"; };
 		8FED56792156B85C002305EC /* LOWallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOWallet.swift; sourceTree = "<group>"; };
+		8FED567C2156BD41002305EC /* LotteryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +127,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FB39614215715C10010F835 /* APIKit.framework in Frameworks */,
+				8F7248322156C2C400AD7B9B /* BitcoinKit.framework in Frameworks */,
 				8FED564C215646FD002305EC /* KeychainAccess.framework in Frameworks */,
+				8FB39616215715C10010F835 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +154,7 @@
 		8FAA9D38215632CA007E1487 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8F72482D2156BDFD00AD7B9B /* APIKit.framework */,
 				8FAA9D3A215632CA007E1487 /* BitcoinKit.framework */,
 				8FAA9D39215632CA007E1487 /* KeychainAccess.framework */,
 			);
@@ -145,6 +164,9 @@
 		8FE4F29621562E4B002AA0DA = {
 			isa = PBXGroup;
 			children = (
+				8F72406E2157139A0070F689 /* APIKit.framework */,
+				8FB39612215715C10010F835 /* APIKit.framework */,
+				8FB39613215715C10010F835 /* Result.framework */,
 				8FE4F2A121562E4B002AA0DA /* lottery */,
 				8FE4F2B621562E4C002AA0DA /* lotteryTests */,
 				8FE4F2C121562E4C002AA0DA /* lotteryUITests */,
@@ -166,6 +188,7 @@
 		8FE4F2A121562E4B002AA0DA /* lottery */ = {
 			isa = PBXGroup;
 			children = (
+				8FED567B2156BD26002305EC /* API */,
 				8FED56702156B0B3002305EC /* View */,
 				8FED5653215648FC002305EC /* Extensions */,
 				8FED5652215648C9002305EC /* Cells */,
@@ -237,6 +260,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		8FED567B2156BD26002305EC /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8FED567C2156BD41002305EC /* LotteryRequest.swift */,
+				8FB39618215717F10010F835 /* AddressRequest.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -248,6 +280,7 @@
 				8FE4F29C21562E4B002AA0DA /* Frameworks */,
 				8FE4F29D21562E4B002AA0DA /* Resources */,
 				8FED56512156475D002305EC /* Embed Frameworks */,
+				8F72406C2156C3730070F689 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -368,6 +401,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8F72406C2156C3730070F689 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8FE4F29B21562E4B002AA0DA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -378,6 +431,7 @@
 				8FED565F21564E61002305EC /* LotteryCell.swift in Sources */,
 				8FAA9D4221563B53007E1487 /* MyPageViewController.swift in Sources */,
 				8FED5667215676B9002305EC /* DetailViewController.swift in Sources */,
+				8FED567D2156BD41002305EC /* LotteryRequest.swift in Sources */,
 				8FED56722156B0F4002305EC /* YenomAlertController.swift in Sources */,
 				8FAA9D4021563A0C007E1487 /* LotteryViewController.swift in Sources */,
 				8FED565D21564C50002305EC /* UIView+Extension.swift in Sources */,
@@ -389,6 +443,7 @@
 				8FED566321566844002305EC /* SectionHeader.swift in Sources */,
 				8FE4F2A321562E4B002AA0DA /* AppDelegate.swift in Sources */,
 				8FED5669215677D6002305EC /* UIViewController+Storyboard.swift in Sources */,
+				8FB39619215717F10010F835 /* AddressRequest.swift in Sources */,
 				8FAA9D3E21563879007E1487 /* WalletViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -571,11 +626,12 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = lottery/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.toshiki.lottery;
+				PRODUCT_BUNDLE_IDENTIFIER = com.toshiki.BitLottery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -593,11 +649,12 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = lottery/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.toshiki.lottery;
+				PRODUCT_BUNDLE_IDENTIFIER = com.toshiki.BitLottery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

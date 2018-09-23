@@ -33,6 +33,10 @@ class WalletViewController: UIViewController {
         
     }
     
+    @IBAction func tapUpdateButton(sender: UIButton) {
+        self.updateLabels()
+    }
+    
     func reloadBalance() {
         // TODO: 3-2. Balanceの更新
         LOWallet.wallet.reloadBalance(completion: { [weak self] (utxos) in
