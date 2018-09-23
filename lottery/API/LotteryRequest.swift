@@ -27,7 +27,11 @@ struct LotteryRequest: Request {
     
     func response(from object: Any, urlResponse: HTTPURLResponse) throws -> [Lottery] {
         let data = try JSONSerialization.data(withJSONObject: object, options: [])
-        return try JSONDecoder().decode(Lotteries.self, from: data).data
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        let decoder: JSONDecoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .formatted(formatter)
+        return try decoder.decode(Lotteries.self, from: data).data
     }
 }
 
@@ -38,8 +42,8 @@ struct Lotteries: Decodable{
 struct Lottery: Decodable{
     let id: Int
     let title: String
-    let begin: String
-    let end: String
+    let begin: Date
+    let end: Date
     let describe: String?
     let price: Int
 }

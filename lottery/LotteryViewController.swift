@@ -75,12 +75,25 @@ extension LotteryViewController: UICollectionViewDelegate, UICollectionViewDeleg
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return lotteries.count
+        let nowLotterries = lotteries.filter{$0.end >= Date()}
+        let endLotterries = lotteries.filter{$0.end < Date()}
+        if section == 0 {
+            return nowLotterries.count
+        } else {
+            return endLotterries.count
+        }
     }
     
     internal func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LotteryCell.defaultReuseIdentifier, for: indexPath) as! LotteryCell
-        cell.setCell(lottery: lotteries[indexPath.row])
+        
+        let nowLotterries = lotteries.filter{$0.end >= Date()}
+        let endLotterries = lotteries.filter{$0.end < Date()}
+        if indexPath.section == 0 {
+            cell.setCell(lottery: nowLotterries[indexPath.row])
+        } else {
+            cell.setCell(lottery: endLotterries[indexPath.row])
+        }
         return cell
     }
 }

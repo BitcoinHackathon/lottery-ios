@@ -16,6 +16,7 @@
 		8FB39616215715C10010F835 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB39613215715C10010F835 /* Result.framework */; };
 		8FB39617215715C10010F835 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB39613215715C10010F835 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8FB39619215717F10010F835 /* AddressRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB39618215717F10010F835 /* AddressRequest.swift */; };
+		8FB3961E21573A2B0010F835 /* CountdownUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB3961D21573A2B0010F835 /* CountdownUtil.swift */; };
 		8FE4F2A321562E4B002AA0DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE4F2A221562E4B002AA0DA /* AppDelegate.swift */; };
 		8FE4F2A821562E4B002AA0DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FE4F2A621562E4B002AA0DA /* Main.storyboard */; };
 		8FE4F2AA21562E4C002AA0DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FE4F2A921562E4C002AA0DA /* Assets.xcassets */; };
@@ -90,6 +91,7 @@
 		8FB39612215715C10010F835 /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
 		8FB39613215715C10010F835 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		8FB39618215717F10010F835 /* AddressRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressRequest.swift; sourceTree = "<group>"; };
+		8FB3961D21573A2B0010F835 /* CountdownUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownUtil.swift; sourceTree = "<group>"; };
 		8FE4F29F21562E4B002AA0DA /* lottery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lottery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FE4F2A221562E4B002AA0DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FE4F2A721562E4B002AA0DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -161,6 +163,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8FB3961C21573A1C0010F835 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				8FB3961D21573A2B0010F835 /* CountdownUtil.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		8FE4F29621562E4B002AA0DA = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +198,7 @@
 		8FE4F2A121562E4B002AA0DA /* lottery */ = {
 			isa = PBXGroup;
 			children = (
+				8FB3961C21573A1C0010F835 /* Util */,
 				8FED567B2156BD26002305EC /* API */,
 				8FED56702156B0B3002305EC /* View */,
 				8FED5653215648FC002305EC /* Extensions */,
@@ -435,6 +446,7 @@
 				8FED56722156B0F4002305EC /* YenomAlertController.swift in Sources */,
 				8FAA9D4021563A0C007E1487 /* LotteryViewController.swift in Sources */,
 				8FED565D21564C50002305EC /* UIView+Extension.swift in Sources */,
+				8FB3961E21573A2B0010F835 /* CountdownUtil.swift in Sources */,
 				8FED565921564971002305EC /* UIView+NibInstantiatable.swift in Sources */,
 				8FED567A2156B85C002305EC /* LOWallet.swift in Sources */,
 				8FED56552156491B002305EC /* UITableView+Extension.swift in Sources */,

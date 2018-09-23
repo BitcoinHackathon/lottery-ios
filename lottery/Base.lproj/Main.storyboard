@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Lottery View Controller-->
+        <!--抽選会-->
         <scene sceneID="p9e-eW-7j9">
             <objects>
                 <viewController id="UM8-Nq-XBZ" customClass="LotteryViewController" customModule="lottery" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,7 +48,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AqW-Bf-p1i"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Lxw-z4-lC6"/>
+                    <navigationItem key="navigationItem" title="抽選会" id="Lxw-z4-lC6"/>
                     <connections>
                         <outlet property="collectionView" destination="wEk-Gh-shX" id="WWn-km-Bc2"/>
                         <segue destination="aMz-Et-FGS" kind="show" identifier="toDetailViewController" id="0ib-kM-Ivd"/>
@@ -156,13 +156,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 bit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3t-fT-YXY">
-                                <rect key="frame" x="174.5" y="157" width="26" height="14.5"/>
+                                <rect key="frame" x="174.5" y="201" width="26" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5N-2b-Hk7">
-                                <rect key="frame" x="110.5" y="128" width="154" height="26.5"/>
+                                <rect key="frame" x="110.5" y="172" width="154" height="26.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="154" id="eHv-X6-zCZ"/>
                                 </constraints>
@@ -171,7 +171,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="残高" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWy-m4-fsV">
-                                <rect key="frame" x="171" y="90" width="33" height="20"/>
+                                <rect key="frame" x="171" y="134" width="33" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="33" id="2b9-1F-BGl"/>
                                 </constraints>
@@ -180,10 +180,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nY4-by-Osd">
-                                <rect key="frame" x="276" y="128" width="24" height="24"/>
+                                <rect key="frame" x="276" y="172" width="24" height="24"/>
                                 <state key="normal" image="ic_update"/>
                                 <connections>
-                                    <action selector="tapUpdateButtonWithSender:" destination="33J-Vh-lEt" eventType="touchUpInside" id="dUr-TX-cHZ"/>
+                                    <action selector="didTapReloadBalanceButton:" destination="33J-Vh-lEt" eventType="touchUpInside" id="gbO-yM-rce"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -204,7 +204,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ATD-XP-p0b"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Wallet" id="dKT-A9-J08"/>
+                    <navigationItem key="navigationItem" title="Wallet" id="hsU-L5-1gZ"/>
                     <connections>
                         <outlet property="addressLabel" destination="Cud-tR-7cL" id="bt3-nt-Jqd"/>
                         <outlet property="balanceFiatLabel" destination="U5N-2b-Hk7" id="5ND-Hz-efp"/>
@@ -214,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WAQ-QB-Mq4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="717.60000000000002" y="-367.46626686656674"/>
+            <point key="canvasLocation" x="1656.8" y="-367.46626686656674"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Tef-OX-uhs">
@@ -226,7 +226,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="33J-Vh-lEt" kind="relationship" relationship="viewControllers" id="GDx-a8-uuj"/>
+                        <segue destination="Q0l-48-DIC" kind="relationship" relationship="viewControllers" id="GDx-a8-uuj"/>
                         <segue destination="vFX-2c-gYS" kind="relationship" relationship="viewControllers" id="5I8-uH-wpS"/>
                         <segue destination="H6F-uh-Qft" kind="relationship" relationship="viewControllers" id="6EM-r7-qZO"/>
                     </connections>
@@ -269,6 +269,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AbL-dB-BTK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="719.20000000000005" y="297.30134932533736"/>
+        </scene>
+        <!--Wallet-->
+        <scene sceneID="qoZ-Ms-PV8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q0l-48-DIC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Wallet" id="dKT-A9-J08"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f5b-hv-h9Q">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="33J-Vh-lEt" kind="relationship" relationship="rootViewController" id="djy-zt-KQt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pfk-Gi-a5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="717.60000000000002" y="-367.46626686656674"/>
         </scene>
     </scenes>
     <resources>

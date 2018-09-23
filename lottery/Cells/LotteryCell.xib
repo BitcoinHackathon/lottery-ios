@@ -27,20 +27,30 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loterry1" translatesAutoresizingMaskIntoConstraints="NO" id="1QB-DW-NaT">
                     <rect key="frame" x="16" y="45" width="334" height="122"/>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NpH-eH-8Jq">
+                    <rect key="frame" x="308" y="16" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
                 <constraint firstItem="3G3-iD-saw" firstAttribute="top" secondItem="u6y-u7-3RV" secondAttribute="top" constant="16" id="44I-1x-Fmp"/>
+                <constraint firstItem="u6y-u7-3RV" firstAttribute="trailing" secondItem="NpH-eH-8Jq" secondAttribute="trailing" constant="16" id="Aud-Oo-hSv"/>
                 <constraint firstItem="3G3-iD-saw" firstAttribute="leading" secondItem="u6y-u7-3RV" secondAttribute="leading" constant="15" id="KDl-v4-aM0"/>
                 <constraint firstItem="u6y-u7-3RV" firstAttribute="trailing" secondItem="3G3-iD-saw" secondAttribute="trailing" constant="105" id="KO8-7T-pgo"/>
                 <constraint firstItem="1QB-DW-NaT" firstAttribute="top" secondItem="3G3-iD-saw" secondAttribute="bottom" constant="8" id="KPm-un-vWj"/>
                 <constraint firstItem="1QB-DW-NaT" firstAttribute="leading" secondItem="u6y-u7-3RV" secondAttribute="leading" constant="16" id="LlW-0R-YEX"/>
+                <constraint firstItem="NpH-eH-8Jq" firstAttribute="top" secondItem="u6y-u7-3RV" secondAttribute="top" constant="16" id="Mln-CV-Nhk"/>
                 <constraint firstItem="u6y-u7-3RV" firstAttribute="trailing" secondItem="1QB-DW-NaT" secondAttribute="trailing" constant="16" id="NTP-ar-cCA"/>
+                <constraint firstItem="1QB-DW-NaT" firstAttribute="top" secondItem="NpH-eH-8Jq" secondAttribute="bottom" constant="8" id="dDm-hr-5WB"/>
                 <constraint firstItem="u6y-u7-3RV" firstAttribute="bottom" secondItem="1QB-DW-NaT" secondAttribute="bottom" constant="11" id="dJK-2r-zBm"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="u6y-u7-3RV"/>
             <connections>
+                <outlet property="countdownLabel" destination="NpH-eH-8Jq" id="Fqh-ee-UwS"/>
                 <outlet property="imageView" destination="1QB-DW-NaT" id="Sq0-CW-DwF"/>
                 <outlet property="titleLabel" destination="3G3-iD-saw" id="qD3-vR-8Oc"/>
             </connections>

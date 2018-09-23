@@ -12,6 +12,9 @@ class LotteryCell: UICollectionViewCell, NibInstantiatable {
     static var nibOptions: [UINib.OptionsKey : Any]?
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var countdownLabel: UILabel!
+    
+    var lottery: Lottery?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,5 +24,12 @@ class LotteryCell: UICollectionViewCell, NibInstantiatable {
     
     func setCell(lottery: Lottery) {
         titleLabel.text = lottery.title
+        self.lottery = lottery
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(LotteryCell.update(timer:)), userInfo: nil, repeats: true)
+    }
+    
+    @objc func update(timer: Timer) {
+        guard let time = lottery?.end else { return }
+        countdownLabel.text = Countdown.remainToString(date: time)
     }
 }
