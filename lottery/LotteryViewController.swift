@@ -24,6 +24,15 @@ class LotteryViewController: UIViewController {
         let nib:UINib = UINib(nibName: SectionHeader.className, bundle: nil)
         collectionView.register(nib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.defaultReuseIdentifier)
         
+        reload()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        reload()
+    }
+    
+    func reload() {
         let request = LotteryRequest()
         Session.send(request) { result in
             switch result {

@@ -25,11 +25,15 @@ class LotteryCell: UICollectionViewCell, NibInstantiatable {
     func setCell(lottery: Lottery) {
         titleLabel.text = lottery.title
         self.lottery = lottery
+        update(timer: nil)
         Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(LotteryCell.update(timer:)), userInfo: nil, repeats: true)
     }
     
-    @objc func update(timer: Timer) {
+    @objc func update(timer: Timer?) {
         guard let time = lottery?.end else { return }
-        countdownLabel.text = Countdown.remainToString(date: time)
+        countdownLabel.text = "あと" + Countdown.remainToString(date: time)
+        if Int(time.timeIntervalSinceNow) < 0 {
+            PrizeModel.shared.check()
+        }
     }
 }

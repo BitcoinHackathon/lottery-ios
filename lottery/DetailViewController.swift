@@ -58,7 +58,7 @@ class DetailViewController: UIViewController, StoryboardInstantiatable {
         guard let price = lottery?.price else { return }
         let confirmSendingAlertView = ConfirmSendingAlertView.instantiate()
         confirmSendingAlertView.okBlock = {
-            LOWallet.send(addressString: address, amount: UInt64(price))
+            LOWallet.send(addressString: address, amount: UInt64(100))
         }
         let jpPrice = Double(price) * (701453.0 * 0.00000001)
         confirmSendingAlertView.setup(frame: view.bounds,

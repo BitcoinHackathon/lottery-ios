@@ -226,9 +226,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Q0l-48-DIC" kind="relationship" relationship="viewControllers" id="GDx-a8-uuj"/>
                         <segue destination="vFX-2c-gYS" kind="relationship" relationship="viewControllers" id="5I8-uH-wpS"/>
-                        <segue destination="H6F-uh-Qft" kind="relationship" relationship="viewControllers" id="6EM-r7-qZO"/>
+                        <segue destination="Q0l-48-DIC" kind="relationship" relationship="viewControllers" id="GDx-a8-uuj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e3g-OW-jzh" userLabel="First Responder" sceneMemberID="firstResponder"/>

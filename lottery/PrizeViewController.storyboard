@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Prize View Controller-->
+        <scene sceneID="R5b-iH-rN5">
+            <objects>
+                <viewController storyboardIdentifier="PrizeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5qN-fL-qDz" customClass="PrizeViewController" customModule="lottery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FjO-LC-f9h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000 satoshi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yq9-rX-VnP">
+                                <rect key="frame" x="103.5" y="201" width="168.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当選おめでとう！！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FiR-cM-cmW">
+                                <rect key="frame" x="73.5" y="318" width="228" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FiR-cM-cmW" firstAttribute="centerX" secondItem="FjO-LC-f9h" secondAttribute="centerX" id="Gvc-xu-pWC"/>
+                            <constraint firstItem="Yq9-rX-VnP" firstAttribute="top" secondItem="Ozb-Dp-qji" secondAttribute="top" constant="181" id="PNS-ZM-KTz"/>
+                            <constraint firstItem="FiR-cM-cmW" firstAttribute="top" secondItem="Yq9-rX-VnP" secondAttribute="bottom" constant="81" id="SQv-ie-BeN"/>
+                            <constraint firstItem="Yq9-rX-VnP" firstAttribute="centerX" secondItem="FjO-LC-f9h" secondAttribute="centerX" id="gbI-YU-jBz"/>
+                            <constraint firstItem="Yq9-rX-VnP" firstAttribute="centerX" secondItem="FjO-LC-f9h" secondAttribute="centerX" id="gfR-7x-9m9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ozb-Dp-qji"/>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="FiR-cM-cmW" id="eK2-fJ-ghi"/>
+                        <outlet property="priceLabel" destination="Yq9-rX-VnP" id="Ogk-Ec-SnF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IMr-Y7-G0k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141" y="91"/>
+        </scene>
+    </scenes>
+</document>
