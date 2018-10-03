@@ -19,25 +19,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000 satoshi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yq9-rX-VnP">
-                                <rect key="frame" x="103.5" y="201" width="168.5" height="36"/>
+                                <rect key="frame" x="103.5" y="70" width="168.5" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当選おめでとう！！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FiR-cM-cmW">
-                                <rect key="frame" x="73.5" y="318" width="228" height="30"/>
+                                <rect key="frame" x="73.5" y="187" width="228" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="great" translatesAutoresizingMaskIntoConstraints="NO" id="ZTk-Gc-Ou1">
+                                <rect key="frame" x="61" y="273" width="240" height="345"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="345" id="BUE-PX-8id"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="FiR-cM-cmW" firstAttribute="centerX" secondItem="FjO-LC-f9h" secondAttribute="centerX" id="Gvc-xu-pWC"/>
-                            <constraint firstItem="Yq9-rX-VnP" firstAttribute="top" secondItem="Ozb-Dp-qji" secondAttribute="top" constant="181" id="PNS-ZM-KTz"/>
+                            <constraint firstItem="ZTk-Gc-Ou1" firstAttribute="leading" secondItem="Ozb-Dp-qji" secondAttribute="leading" constant="61" id="JhG-y1-YNy"/>
+                            <constraint firstItem="Yq9-rX-VnP" firstAttribute="top" secondItem="Ozb-Dp-qji" secondAttribute="top" constant="50" id="PNS-ZM-KTz"/>
                             <constraint firstItem="FiR-cM-cmW" firstAttribute="top" secondItem="Yq9-rX-VnP" secondAttribute="bottom" constant="81" id="SQv-ie-BeN"/>
+                            <constraint firstItem="Ozb-Dp-qji" firstAttribute="trailing" secondItem="ZTk-Gc-Ou1" secondAttribute="trailing" constant="74" id="Vkw-ha-IWJ"/>
                             <constraint firstItem="Yq9-rX-VnP" firstAttribute="centerX" secondItem="FjO-LC-f9h" secondAttribute="centerX" id="gbI-YU-jBz"/>
                             <constraint firstItem="Yq9-rX-VnP" firstAttribute="centerX" secondItem="FjO-LC-f9h" secondAttribute="centerX" id="gfR-7x-9m9"/>
+                            <constraint firstItem="Ozb-Dp-qji" firstAttribute="bottom" secondItem="ZTk-Gc-Ou1" secondAttribute="bottom" constant="49" id="mZz-F7-k14"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ozb-Dp-qji"/>
                     </view>
@@ -48,7 +57,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IMr-Y7-G0k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="141" y="91"/>
+            <point key="canvasLocation" x="140" y="90.404797601199405"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="great" width="600" height="900"/>
+    </resources>
 </document>

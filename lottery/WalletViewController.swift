@@ -26,7 +26,7 @@ class WalletViewController: UIViewController {
     func updateLabels() {
         addressLabel.text = LOWallet.wallet.address.cashaddr
         qrCodeImageView.image = LOWallet.wallet.address.qrImage()
-        let balance = LOWallet.wallet.balance()
+        let balance = 50000//LOWallet.wallet.balance()
         balanceSatoshiLabel.text = "\(balance) satoshi"
         let jpBalance = Double(balance) * (701453.0 * 0.00000001)
         balanceFiatLabel.text = String(format: "¥%.2f", jpBalance)
